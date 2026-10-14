@@ -21,7 +21,7 @@ target_sources(app
     ${OPENRTX_ROOT}/platform/drivers/audio/audio_ttwrplus.c
 
     ${OPENRTX_ROOT}/platform/drivers/stubs/cps_io_stub.c
-    ${OPENRTX_ROOT}/platform/drivers/stubs/nvmem_stub.c
+    ${OPENRTX_ROOT}/platform/drivers/NVM/nvmem_ttwrplus.c
 
     ${OPENRTX_ROOT}/subprojects/XPowersLib/src/XPowersLibInterface.cpp
 )

@@ -1,6 +1,18 @@
 # OpenRTX
 ## Modular Open Source Radio Firmware
 
+## T-TWR Plus (original revision) fork status
+
+The `ttwrplus-original` branch starts from OpenRTX `v0.3.6`, the last release
+that included a binary for the original LilyGo T-TWR Plus. It now saves radio
+settings and the current VFO channel in the board's built-in flash, so an SD
+card is not required. Saving and restoring these values has been tested on the
+original radio across a normal shutdown and restart.
+
+Saved channel memories, banks, and contacts are not implemented on this target
+yet; its codeplug storage still uses a stub. This branch is for the original
+T-TWR Plus, not the T-TWR Plus 2.1.
+
 OpenRTX is a free and open source firmware for digital amateur radio devices, top-down designed
 with modularity, flexibility and performance in mind.
 

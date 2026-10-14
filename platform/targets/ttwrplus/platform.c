@@ -19,6 +19,7 @@
 
 #include <interfaces/platform.h>
 #include <interfaces/delays.h>
+#include <interfaces/nvmem.h>
 #include <hwconfig.h>
 
 #include <zephyr/drivers/gpio.h>
@@ -55,6 +56,7 @@ static struct led_rgb led_color = {0};
 
 void platform_init()
 {
+    nvm_init();
     // Setup GPIO for PTT and rotary encoder
     if(gpio_is_ready_dt(&button_ptt) == false)
         printk("Error: button device %s is not ready\n", button_ptt.port->name);
@@ -107,6 +109,7 @@ void platform_init()
 
 void platform_terminate()
 {
+    nvm_terminate();
     pmu_terminate();
 }
 
